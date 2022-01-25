@@ -18,7 +18,7 @@ class Email
         this.#email = value;
     }
 
-    createEmail(email:string){
+    createEmail(email:string):Email{
         //validation
         if (!email || email.length === 0 ){
             throw new Error("email cannot be empty");
@@ -26,7 +26,7 @@ class Email
         else if(!(email.includes("@"))){
             throw new Error("not a valid email");
         }
-      new Email(email);
+     return new Email(email);
     }
 
     public toValue(){
@@ -44,12 +44,12 @@ class Name
         this.#name = value;
     }
 
-    createName(name:string){
+    createName(name:string):Name{
         //validation
         if (!name || name.length === 0 ){
             throw new Error("name cannot be empty");
         }
-      new Name(name);
+      return new Name(name);
     }
 
     public toValue(){
