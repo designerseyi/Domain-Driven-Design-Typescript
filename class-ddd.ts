@@ -62,4 +62,4 @@ class Name
 
 class PersonAggregate {
 
-}
+ }
